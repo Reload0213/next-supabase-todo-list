@@ -4,6 +4,7 @@
         "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true, // 자바스크립트 허용
         "noImplicitAny": false, // any 타입 기본
+        "strictNullChecks": false,
         "skipLibCheck": true,
         "strict": false,
         "forceConsistentCasingInFileNames": false,
