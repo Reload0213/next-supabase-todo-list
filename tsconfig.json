@@ -3,7 +3,7 @@
         "target": "es5",
         "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true, // 자바스크립트 허용
-        "noImplicitAny": false, // any 타입 기본
+        "noImplicitAny": false, // any 타입 기본(any를 꼭 명시 안해도 되도록)
         "strictNullChecks": false,
         "skipLibCheck": true,
         "strict": false,
@@ -23,11 +23,12 @@
             }
         ],
         "paths": {
+            // 컴파일할 위치 src나 별도의 상위폴더 없기 때문에 바로 app폴더를 말수 있도록 최상위로 경로 설정
             "*": ["./*"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-    "exclude": ["node_modules"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"], // 컴파일할 양식
+    "exclude": ["node_modules"], // 빌드(컴파일) 시 node 모듈은 안할거기 때문에
     "ts-node": {
         "compilerOptions": {
             "module": "commonjs"

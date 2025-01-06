@@ -1,6 +1,8 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr';
 import { type NextRequest, NextResponse } from 'next/server';
 
+// 매 호출(request)와 응답(response) 사이 동작을 넣을 때 사용
+// 호출 시 매번 최신화 된 토큰을 가져올 수 있도록 설정됨
 export const applyMiddlewareSupabaseClient = async (request: NextRequest) => {
     // Create an unmodified response
     let response = NextResponse.next({
